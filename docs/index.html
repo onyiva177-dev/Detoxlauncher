@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detox Launcher — Download</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #F5F3EF;
+    color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 24px;
+  }
+  h1 { font-size: 28px; letter-spacing: 0.5px; margin-bottom: 8px; }
+  p.tag { color: #8A8A8A; font-size: 15px; margin-bottom: 40px; }
+  .cta {
+    background: #1A1A1A;
+    color: #F5F3EF;
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    align-items: center; justify-content: center;
+  }
+  .overlay.show { display: flex; }
+  .modal {
+    background: #F5F3EF;
+    border-radius: 12px;
+    padding: 28px;
+    max-width: 340px;
+    text-align: left;
+  }
+  .modal h2 { font-size: 18px; margin-top: 0; }
+  .modal ol { padding-left: 20px; font-size: 14px; color: #333; }
+  .modal a.download-link {
+    display: block;
+    margin-top: 20px;
+    background: #1A1A1A;
+    color: #F5F3EF;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .modal button.close {
+    margin-top: 12px;
+    background: none;
+    border: none;
+    color: #8A8A8A;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Detox Launcher</h1>
+  <p class="tag">A minimalist, text-only home screen. No icons, no color, no scroll-bait.</p>
+  <button class="cta" onclick="document.getElementById('overlay').classList.add('show')">Download for Android</button>
+
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <h2>Install Detox Launcher</h2>
+      <ol>
+        <li>Tap "Download APK" below</li>
+        <li>Open the downloaded file (allow "install unknown apps" if prompted)</li>
+        <li>Press your phone's Home button once — choose Detox Launcher, then "Always"</li>
+        <li>Grant Usage Access when asked, so screen-time tracking works</li>
+      </ol>
+      <!-- REPLACE "YOUR_USERNAME/YOUR_REPO" with your actual GitHub repo path -->
+      <a class="download-link" href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/latest/download/DetoxLauncher.apk">
+        Download APK
+      </a>
+      <button class="close" onclick="document.getElementById('overlay').classList.remove('show')">Cancel</button>
+    </div>
+  </div>
+
+</body>
+</html>
